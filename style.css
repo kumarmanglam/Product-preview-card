@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+}
+
+html,
+body {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--Cream);
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 630px;
+    margin: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.perfume-image{
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.desc {
+    flex: 1 1 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 3rem;
+    line-height: 1em;
+    padding: 10px 0;
+}
+
+p {
+    color: var(--Dark_grayish_blue);
+    padding: 15px 0;
+}
+
+.prices {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--Dark_cyan);
+}
+
+.discounted-price {
+    font-size: 2.6rem;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    padding: 15px 5px;
+}
+
+.orginal-price {
+    text-decoration: line-through;
+}
+
+.card-btn {
+    padding: 10px;
+    background-color: var(--Dark_cyan);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.card-btn>* {
+    padding: 20px;
+}
+
+.card-btn:hover {
+    box-shadow: 2px 3px 4px grey;
+}
+
+
+@media (max-width: 375px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 20px;
+    }
+    .perfume-image {
+        height: 200px;
+        flex:1;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;;
+    }
+    .desc{
+        flex:1;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+    }
+}
