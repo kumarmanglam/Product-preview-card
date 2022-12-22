@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
 }
 
 :root {
@@ -16,38 +17,42 @@
     --Cream: hsl(30, 38%, 92%);
 }
 
-html,
+
+
 body {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: 'Montserrat', sans-serif;
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: var(--Cream);
 }
 
 .card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 630px;
-    margin: 30px;
+    display: flex;
+    max-width: 42.25%;
     background-color: white;
     border-radius: 10px;
+    max-width:630px;
 }
 
-.perfume-image{
-    height: 100%;
+.img{
+    background-image: url("./images/image-product-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    width: 100%;
 }
 
-
 .desc {
-    flex: 1 1 50%; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 30px;
+    width: 100%
 }
 
 h1 {
@@ -85,7 +90,7 @@ p {
     background-color: var(--Dark_cyan);
     color: white;
     border-radius: 10px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
@@ -98,22 +103,27 @@ p {
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 640px) {
+    html {
+        font-size: 80%;
+    }
     .card{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         margin: 20px;
     }
-    .perfume-image {
-        height: 200px;
-        flex:1;
+    .img {
+        background-image: url("./images/image-product-mobile.jpg");
+        background-position: 0 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         border-bottom-left-radius: 0;;
     }
     .desc{
-        flex:1;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         border-top-right-radius: 0;
